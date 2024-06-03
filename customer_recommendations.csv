@@ -1,0 +1,6 @@
+Customer_ID,Age,Gender,Category,Category_ID,Item_Purchased,Item_Purchased_ID,Purchase_Amount (USD),Location,Size,Color,Sku_ID,Season,Review_Rating,Subscription Status,Shipping_Type,Discount_Applied,Previous_Purchases,Frequency of Purchases,Discount_Purchase_Ratio,High_Rating_Purchase_Ratio,Frequency_of_Purchases,Segment,Recommendations
+1,25,Male,Clothing,101,T-Shirt,1001,20,New York,M,Red,2001,Summer,5,Yes,Standard,5,1,2,5.0,1.0,2,1,"['Discounted Product 1', 'Discounted Product 2']"
+1,25,Male,Clothing,101,T-Shirt,1001,20,New York,M,Red,2001,Summer,5,Yes,Standard,5,1,2,5.0,1.0,2,1,"['Discounted Product 1', 'Discounted Product 2']"
+2,30,Female,Electronics,102,Smartphone,1002,300,Los Angeles,N/A,Black,2002,All,4,No,Express,0,2,3,0.0,1.0,3,2,"['Full Price Product 1', 'Full Price Product 2']"
+2,30,Female,Electronics,102,Smartphone,1002,300,Los Angeles,N/A,Black,2002,All,4,No,Express,0,2,3,0.0,1.0,3,2,"['Full Price Product 1', 'Full Price Product 2']"
+3,35,Male,Clothing,101,Jeans,1003,50,Chicago,L,Blue,2003,Winter,3,Yes,Standard,10,3,1,10.0,0.0,1,1,"['Discounted Product 1', 'Discounted Product 2']"
