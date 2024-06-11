@@ -61,5 +61,5 @@ We would like to thank Open AI's ChatGPT for the code suggestion to use the Trun
 #### Contributors
 * Kyle Kerner
 * Sonu Sharma
-* Randolph Bradley
+* Randolph "Scott" Bradley
 
