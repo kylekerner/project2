@@ -54,7 +54,7 @@ Through this analysis, we aim to provide recommended personalized items for a cu
 ### Dataset Credits
 The data used in this project was sourced from Kaggle. There was no listed author for this dataset.  We would like to thank Zee Solver, the owner of this dataset, for the information provided.
 
-Code credits
+## Code credits
 We would like to thank Open AI's ChatGPT for the code suggestion to use the Truncated SVD to find customer recommendations based customer's previously purchased items.
 
 
