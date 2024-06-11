@@ -1,6 +1,101 @@
 # Personalization:  Customer Segmentation and Product Recommendation System
 ## Introduction
-This project provides recommendations for customers based on previous purchases, discount or no discount , price, color, and size.
+Problem Statement
+
+Group 2 Retail Company - aims to enhance customer experience by providing personalized product recommendations based on their purchasing behavior. The goal is to:
+
+1. Identify customers who shop more on discounted products.
+
+2. Identify customers who buy non-discounted products.
+
+3. Identify customers who have made 30 or more previous purchases.
+
+4. Identify customers who give high ratings (4 and above).
+
+5. Recommend products accordingly, with an additional 20% discount for customers who have made 30 or more purchases.
+
+6. Ensure that recommendations are limited to 20 products or less and that they match the customer's size preferences.
+
+7. Calculate and present the total amount, discount applied, and net total for the recommended products.
+
+Business Logic
+To achieve these goals, we implemented the following business logic:
+
+Segmentation: Customers are segmented based on their purchasing behavior into four categories:
+
+Discount Shoppers: Customers who primarily shop on discounted products.
+
+Non-Discount Shoppers: Customers who primarily buy non-discounted products and have fewer than 30 purchases and lower review ratings.
+
+High Purchase Shoppers: Customers who have made 30 or more purchases.
+
+High Rating Givers: Customers who frequently give high ratings (4 and above).
+
+Product Recommendations: Products are recommended based on the customer's segment, gender, and size preferences. For high purchase shoppers, an additional 20% discount is applied.
+
+Calculation of Totals: For the recommended products, the total amount, discount applied, and net total are calculated and presented to the customer.
+
+Implementation
+
+The implementation involved several steps, from data loading and preprocessing to feature engineering, customer segmentation, and product recommendation. Here's a detailed breakdown:
+
+1. Data Loading and Preprocessing
+
+We loaded product data and customer purchase history data from CSV files and ensured that certain columns were in the correct format. This step included converting 'Yes'/'No' values to 1/0 and handling non-numeric values by converting them to numeric types and filling missing values.
+
+2. Visualization
+
+We created functions to visualize both product and customer data. These visualizations included distributions of discounts and gender for products and distributions of review ratings, previous purchases, and purchase frequency for customers.
+
+3. Feature Engineering
+
+We engineered new features to capture key aspects of customer behavior:
+
+Discount_Purchase_Ratio: The ratio of discounted purchases to total purchases.
+
+High_Rating_Purchase_Ratio: The ratio of high-rated purchases to total purchases.
+
+Previous_Purchases: The maximum number of previous purchases by a customer.
+
+Frequency_of_Purchases: The maximum frequency of purchases by a customer.
+
+These features helped us in segmenting the customers effectively.
+
+4. Customer Segmentation
+
+Customers were segmented based on the following conditions:
+
+Discount Shoppers: Customers with a high ratio of discounted purchases.
+
+Non-Discount Shoppers: Customers with a low ratio of discounted purchases, fewer than 30 previous purchases, and low review ratings.
+
+High Purchase Shoppers: Customers with 30 or more previous purchases.
+
+High Rating Givers: Customers with high review ratings (4 and above).
+
+The segments were defined using clear and mutually exclusive conditions to ensure customers fell into only one segment.
+
+5. Model Training
+
+We trained a Random Forest classifier to predict customer segments based on the engineered features. This model was evaluated using a classification report and a confusion matrix to ensure its accuracy.
+
+6. Product Recommendation
+
+A function was created to recommend products based on the customer's segment, gender, and size preferences. If the customer fell into the "High Purchase Shoppers" segment, an additional 20% discount was applied to the recommended products. The recommendations were limited to 20 products or less to keep them manageable.
+
+7. Calculation of Totals
+
+Another function calculated the total amount, discount applied, and net total for the recommended products. This information was presented to the customer along with the product recommendations.
+
+8. User Interaction
+
+The main function brought everything together, prompting the user for a Customer ID, segmenting the customer, and providing personalized product recommendations along with detailed pricing information.
+
+Summary
+
+This implementation allows the business to enhance customer experience by providing personalized product recommendations based on detailed analysis of their purchasing behavior. By segmenting customers and tailoring recommendations to their preferences, we can improve customer satisfaction and potentially increase sales. The additional 20% discount for loyal customers (those with 30 or more purchases) helps in retaining these valuable customers, fostering loyalty, and encouraging further purchases.
+
+This project provides recommendations for customers based on previous purchases, discount or no discount, price, color, and size.
 
 ## Data Source
 https://www.kaggle.com/datasets/zeesolver/consumer-behavior-and-shopping-habits-dataset
